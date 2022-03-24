@@ -18,3 +18,4 @@ RUN curl -L https://convox.com/cli/linux/convox -o /tmp/convox \
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
