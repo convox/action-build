@@ -11,6 +11,10 @@ inputs:
   description:
     description: Convox build description
     required: false
+  cached:
+    description: Whether to utilise the docker cache during the build
+    required: false
+    default: true
 outputs:
   release:
     description: Release ID of the created build
