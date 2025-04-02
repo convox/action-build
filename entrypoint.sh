@@ -12,5 +12,5 @@ then
   echo "Build failed"
   exit 1
 fi
-echo ::set-output name=release::$release
+echo "release=$release" >> $GITHUB_OUTPUT
 echo "RELEASE=$release" >> $GITHUB_ENV
