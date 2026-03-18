@@ -1,6 +1,9 @@
 name: Convox Build
 description: Build a Convox app
 author: Convox
+branding:
+  icon: package
+  color: blue
 inputs:
   rack:
     description: Convox Rack name
