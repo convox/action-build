@@ -13,7 +13,7 @@ This Action [builds](https://docs.convox.com/deployment/builds) an app based on 
 
 ## Outputs
 ### `release`
-The ID of the release that is created when the build completes. 
+The ID of the release that is created when the build completes. Available via `${{ steps.<id>.outputs.release }}` (GITHUB_OUTPUT) and as the `$RELEASE` environment variable (GITHUB_ENV) for downstream steps.
 ## Example usage
 ```
 uses: convox/action-build@v1
