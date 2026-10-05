@@ -16,8 +16,11 @@ This Action [builds](https://docs.convox.com/deployment/builds) an app based on 
 The ID of the release that is created when the build completes. Available via `${{ steps.<id>.outputs.release }}` (GITHUB_OUTPUT) and as the `$RELEASE` environment variable (GITHUB_ENV) for downstream steps.
 ## Example usage
 ```
-uses: convox/action-build@v1
+uses: convox/action-build@v2
 with:
   rack: staging
   app: myapp
 ```
+
+## Convox CLI version
+This action installs the latest Convox CLI release when its image is built, so the action's version tag does not pin the CLI. On GitHub-hosted runners that happens on every run. On a self-hosted runner with a persistent Docker daemon, the CLI stays at the version cached in that daemon until its build cache is pruned.
